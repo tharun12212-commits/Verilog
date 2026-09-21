@@ -9,7 +9,7 @@ fulladder uut(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
 initial begin
 $dumpfile("output.vcd");
 $dumpvars(0, fulladder_tb);
-$monitor("Time=%0t |a=%h b=%h cin=%h |sum=%b cout=%b",a,b,cin,cout);
+$monitor("Time=%0t |a=%b b=%b cin=%b |sum=%b cout=%b",$time,a,b,cin,cout);
 
 a=0; b=0; cin=0; #10;
 a=0; b=0; cin=1; #10;
